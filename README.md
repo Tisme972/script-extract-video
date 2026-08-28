@@ -76,8 +76,8 @@ python3 senpai_dl.py https://senpai-stream.bond/anime/one-piece --extract-only
 
 ## Avertissement
 
-Ce script est fourni à des fins d'étude technique et d'usage personnel. Il contourne des mécanismes anti-bot et publicitaires mis en place par le site cible. Son utilisation doit respecter les conditions d'utilisation de `senpai-stream.bond`, ainsi que le droit d'auteur applicable au contenu téléchargé. L'auteur décline toute responsabilité en cas d'usage contraire à la loi ou aux CGU du site.
+Ce logiciel est fourni "tel quel", sans aucune garantie. L'auteur décline toute responsabilité quant à l'usage qui en est fait — voir [LICENSE](LICENSE).
 
 ## Licence
 
-Usage personnel uniquement — aucune licence de redistribution n'est accordée.
+[MIT](LICENSE)
