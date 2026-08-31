@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-senpai_dl.py – Extraction / téléchargement du flux vidéo depuis senpai-stream.bond
+senpai_dl.py – Extraction / téléchargement du flux vidéo depuis senpai-stream.site
 ================================================================================
 
 Objectif : à partir de l'URL publique d'une œuvre (film / série / anime / épisode)
-sur https://senpai-stream.bond, ce script identifie automatiquement l'URL du
+sur https://senpai-stream.site, ce script identifie automatiquement l'URL du
 fichier MP4 hébergé (Cloudflare R2, S3-compatible, URL pré-signée AWS SigV4)
 et la télécharge.
 
@@ -24,9 +24,9 @@ Usage :
     python3 senpai_dl.py <URL_œuvre> [-o fichier.mp4] [--extract-only] [--index N]
 
 Exemples :
-    python3 senpai_dl.py https://senpai-stream.bond/movie/backrooms
-    python3 senpai_dl.py https://senpai-stream.bond/episode/9-1-1/9-17 -o s9e17.mp4
-    python3 senpai_dl.py https://senpai-stream.bond/anime/one-piece --extract-only
+    python3 senpai_dl.py https://senpai-stream.site/movie/backrooms
+    python3 senpai_dl.py https://senpai-stream.site/episode/9-1-1/9-17 -o s9e17.mp4
+    python3 senpai_dl.py https://senpai-stream.site/anime/one-piece --extract-only
 
 Dépendances :
     pip install requests
@@ -50,7 +50,7 @@ import requests
 # Constantes
 # ---------------------------------------------------------------------------
 
-BASE_URL = "https://senpai-stream.bond"
+BASE_URL = "https://senpai-stream.site"
 LIVEWIRE_ENDPOINT = f"{BASE_URL}/livewire/update"
 UA = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -255,7 +255,7 @@ def download(url: str, out_path: str, resume: bool = True) -> None:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Extraction MP4 depuis senpai-stream.bond")
+    ap = argparse.ArgumentParser(description="Extraction MP4 depuis senpai-stream.site")
     ap.add_argument("url", help="URL de l'œuvre (movie/tv-show/anime/episode).")
     ap.add_argument("-o", "--output", help="Fichier de sortie (défaut : dérivé du slug).")
     ap.add_argument("-i", "--index", type=int, default=0, help="Index de source vidéo.")
